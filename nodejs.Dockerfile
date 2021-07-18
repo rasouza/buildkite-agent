@@ -9,3 +9,5 @@ RUN apk add --update nodejs-current yarn npm \
     && chmod +x /usr/bin/cc-test-reporter \
     && git config --global user.email "alves.wm@gmail.com" \
     && git config --global user.name "R. A. Souza"
+COPY hooks /buildkite/hooks/
+RUN chmod -R +x /buildkite/hooks
